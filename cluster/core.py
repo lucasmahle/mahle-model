@@ -42,20 +42,17 @@ def calculate_tfidf_avg(corpus_tfidf, kmeans, n_clusters, dictionary):
 def get_relevants_words(num_words, tfidf_cluster, dictionary):
   cluster_topics = {}
 
-  # Para cada cluster na matriz de média tfidf do cluster
   for k in tfidf_cluster:
-    # Ordena o dicionário considerando os tfidfs mais altos
     sorted_cluster_tfidf = dict(sorted(tfidf_cluster[k].items(), key = lambda item: item[1], reverse = True))
-    # Obtem o id da lista
-    sorted_cluster_tfidf = list(sorted_cluster_tfidf.keys())
-
     cluster_topics[k] = []
     
-    # Adiciona as x mais relevantes a partir da lista ordenada
-    for i in range(num_words):
-      # Obtem o id da palavra
-      word_id = sorted_cluster_tfidf[i]
-      # Adiciona a palavra ao tópico
-      cluster_topics[k].append(dictionary[word_id])
+    i = 0
+    for word_id in sorted_cluster_tfidf:
+      word = dictionary[word_id]
+      prob = sorted_cluster_tfidf[word_id]
+      cluster_topics[k].append((word, prob))
+
+      if i == num_words: break
+      i += 1
     
   return cluster_topics
