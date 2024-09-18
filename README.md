@@ -12,7 +12,7 @@ pip install .
 
 ## Use example
 
-You can check how to use the model on example section clicking [here](./example/README.md).
+You can check how to use the model on example section clicking [here](./example/example-1.py).
 
 
 <!-- ## Article
