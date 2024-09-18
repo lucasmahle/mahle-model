@@ -15,9 +15,9 @@ pip install .
 You can check how to use the model on example section clicking [here](./example/README.md).
 
 
-## Article
+<!-- ## Article
 
-For more information about the article, you can refer to the [unofficial translated PDF.](./article/en.pdf)
+For more information about the article, you can refer to the [unofficial translated PDF.](./article/en.pdf) -->
 
 
 ## Maintainership
