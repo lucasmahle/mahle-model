@@ -1,1 +1,1 @@
-from .model.MahleModel import MahleModel
+from .src.model.MahleModel import MahleModel
