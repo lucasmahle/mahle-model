@@ -5,8 +5,8 @@ TFIDFK Model process the collection to get TF-IDF corpus
 and exposes features methods to retrive topics or documents
 """
 
-from mahlemodel.collection import generate_dictionary, generate_bow, generate_tfidf_model, mahle_collection_transform
-from mahlemodel.cluster import get_kmeans_data, generate_clusters, calculate_tfidf_avg, get_relevants_words
+from ..collection import generate_dictionary, generate_bow, generate_tfidf_model, mahle_collection_transform
+from ..cluster import get_kmeans_data, generate_clusters, calculate_tfidf_avg, get_relevants_words
 
 from gensim.interfaces import TransformedCorpus
 import numpy as np
